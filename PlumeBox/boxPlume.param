@@ -1,0 +1,70 @@
+<<<BEGIN TEMPORAL CONTROL>>>
+numTimeSteps = 300
+newtonIterations = 1
+<<<END TEMPORAL CONTROL>>>
+
+<<<BEGIN SOLUTION ORDERING>>>
+Iterate boxPlume
+<<<END SOLUTION ORDERING>>>
+
+<<<BEGIN SPACE boxPlume>>>
+#equationSet = compressibleNSFR
+equationSet = compressibleEulerFR
+fluxType = roeFlux
+reorderMesh = 1
+
+localTimeStepping = 1
+#startingCFL = 3.0
+#rampCFL = 60	    
+CFL = 4.0
+
+timeOrder = 0
+spatialOrder = 1
+
+jacobianUpdateFrequency = 1
+jacobianBoundaryEval = 0
+numberSGS = 6
+
+mach = 0.02
+gamma = 1.4
+
+flowDirection = [1.0, 0.0, 0.0]
+liftDirection = [0.0, 1.0, 0.0]
+
+solutionWrite = 0
+solutionTagStep = 0
+
+useRestart = 0
+restartWrite = 50
+
+turbulenceModel = 0
+
+massFractions = [1.0, 0.0]
+reactionsOn = 1
+
+#design control
+designSolver = 0
+designSGSIterations = 3000
+preconditioner = 2
+designRestarts = 1
+designSearchDirections = 1500	
+
+gaussianSourceOn = 1
+gaussianEqn = 1
+gaussianBCid = 3
+gaussianX = 2.5
+gaussianZ = 2.5
+gaussianAmplitude = 0.1
+
+#air at 20C
+refDensity = 1.153
+refVelocity = 382.2
+refLength = 0.01
+refViscosity = 1.98E-3
+refTemperature = 500
+
+sensorTarget = [7.5473949922725582e-03, 7.2869897007143258e-03, 2.7102250715230190e-03, 2.7818469207133989e-03]
+objectiveFunction = 3
+sensorEqn = 1
+
+<<<END SPACE>>>

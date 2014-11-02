@@ -1,0 +1,131 @@
+PARAM: Reading parameter file --> ../../Tests/CompDesignNaca0012//naca0012_two_plane.param
+PARAM: Reading solution space "naca0012_two_plane" from parameter file
+/******************************************/
+  SOLUTION SPACE: naca0012_two_plane
+/******************************************/
+
+PARAM: Runtime parameters from file
+===================================
+	Equation set: compressibleEuler
+	Flux type: roeFlux
+	Number of SGS sweeps: 6
+	Jacobian update frequency: 2
+	Field jacobian type: upwind
+	Boundary jacobian type: upwind
+	WARNING: Using approximate boundary jacobians!!!
+	Temporal order of accuracy: 0
+	Spatial order of accuracy: 1
+	Using Local Timestepping!!
+	CFL: 25
+	CFL ramping enabled!!
+	CFL start: 3
+	CFL ramping steps: 60
+	Gamma (Cp/Cv): 1.4
+	Mach number: 0.8
+Chemical reactions turned ON
+Reference variables (specified)
+===============================
+	velocity : 1
+	length : 1
+	temperature : 1
+	density : 1
+	viscosity: 1
+	conductivity: 1
+Reference variables (derived)
+===============================
+	time : 1
+	enthalpy: 1
+	pressure: 1
+
+	Flow direction vector 0.999762 0.0218149 0
+	Lift direction vector 0.0218149 0.999762 0
+
+
+
+PARAM: Reading solution ordering --> ../../Tests/CompDesignNaca0012//naca0012_two_plane.param
+SOLUTION ORDERING: Reading solution ordering from parameter file
+SOLUTION ORDERING
+===================
+	+ Iterate naca0012_two_plane
+
+PARAM: Reading temporal control file --> ../../Tests/CompDesignNaca0012//naca0012_two_plane.param
+TEMPORAL CONTROL: Reading temporal parameters
+/***************************************************/
+  TEMPORAL CONTROL: Runtime parameters from file
+/***************************************************/
+
+Number of timesteps: 1000
+Number of Newton iterations: 1
+
+PARTITION HDF I/O: Reading file --> ../../Tests/CompDesignNaca0012/naca0012_two_plane.1.h5
+PARTITION HDF I/O: Number of local nodes 2566
+PARTITION HDF I/O: Number of ghost nodes 74
+PARTITION HDF I/O: Number of Tris 4888
+PARTITION HDF I/O: Number of Quads 160
+PARTITION HDF I/O: Number of Tets 0
+PARTITION HDF I/O: Number of Pyramids 0
+PARTITION HDF I/O: Number of Prisms 2444
+PARTITION HDF I/O: Number of Hexes 0
+PARTITION HDF I/O: File read successful!!
+MESH UTILITY: Building element to surrounding point map... 
+MESH UTILITY: Building point to surrounding point map... 
+MESH UTILITY: Reordering graph with Cuthill-McKee... 
+MESH UTILITY: Building element to surrounding point map... 
+MESH UTILITY: Building point to surrounding point map... 
+MESH UTILITY: Building volume element to surrounding element map... 
+MESH UTILITY: Rewinding 2604 boundary elements
+MESH UTILITY: Building surface element to surrounding element map... 
+MESH UTILITY: Building edge map... 
+MESH UTILITY: Building point to edge map... 
+Clearing old solution data
+BC: Reading boundary conditions file --> ../../Tests/CompDesignNaca0012/naca0012_two_plane.bc
+BC: Surfaces found in file: 4
+BC: Largest surface ID found in file: 4
+COMPOSITE: Composite bodies found in file: 1
+COMPOSITE: Largest composite body ID found in file: 1
+BC: BC #4 movement flag found ( 1 )
+BC: Runtime boundary conditions from file
+=========================================
+	Surface 1 moved to BC #1 internally  -- symmetry far_plane
+	Surface 2 moved to BC #2 internally  -- symmetry near_plane
+	Surface 3 moved to BC #3 internally  -- farField ring
+	Surface 4 moved to BC #4 internally  -- impermeableWall airfoil
+
+MESH UTILITY: Calculating geometry metrics
+MESH UTILITY: Maximum mesh extents: 10 -1.78132 -0.05
+MESH UTILITY: Minimum mesh extents: -9.5 -0.05 6.95318e-310
+MESH UTILITY: Enclosed volume center of mass: 0.252281 0.00456636 -0.025
+MESH UTILITY: Total enclosed volume: 14.7201
+MESH UTILITY: Component surface area leakage: -4.64337e-16 1.13635e-15 1.42774e-12
+MESH UTILITY: Total surface area leakage: 1.42774e-12
+MESH UTILITY: 0 control volumes not watertight... 
+SENSORS_IO: reading sensors file ../../Tests/CompDesignNaca0012/naca0012_two_plane.sensors
+COMPOSITE: Reading boundary conditions file --> ../../Tests/CompDesignNaca0012/naca0012_two_plane.bc
+COMPOSITE: Composite body 1 made of surfaces - [ 4 ] Moment CG: 0 0 0 Moment Axis: 0 0 1
+Initializing flow field: 
+========================
+	Qinf[0] = 1.000000e+00	Density
+	Qinf[1] = 7.998096e-01	Momentum
+	Qinf[2] = 1.745191e-02	Momentum
+	Qinf[3] = 0.000000e+00	Momentum
+	Qinf[4] = 2.105714e+00	TotalEnergy
+	Qinf[5] = 1.000000e+00	Temperature
+	Qinf[6] = 7.142857e-01	Pressure
+
+Registered fields on solution space naca0012_two_plane: 
+============================================================
+	+ variableQ
+	+ limiter
+	+ timestep
+	+ partition
+Linear elastic solve - D||Ax-b||: 4.608769e+00
+MESH UTILITY: Calculating geometry metrics
+MESH UTILITY: Maximum mesh extents: 1.000000e+01 -1.315274e+00 -5.000000e-02
+MESH UTILITY: Minimum mesh extents: -9.500000e+00 -5.000000e-02 6.953184e-310
+MESH UTILITY: Enclosed volume center of mass: 2.387873e-01 -7.736674e-03 -2.500000e-02
+MESH UTILITY: Total enclosed volume: 1.467449e+01
+MESH UTILITY: Component surface area leakage: -4.660172e-16 1.039831e-15 -3.527334e-13
+MESH UTILITY: Total surface area leakage: 3.527353e-13
+MESH UTILITY: 0 control volumes not watertight... 
+MPI_InitTimer: 6.503400e-02 sec
+MovementTimer: 1.012098e+01 sec

@@ -1,0 +1,6 @@
+#BC file... comments start with a # symbol
+#
+surface #1 = symmetry "walls"
+surface #2 = symmetry "walls"
+surface #3 = dirichlet "in" Qref = [1.5]
+surface #4 = dirichlet "out" Qref = [1.0]

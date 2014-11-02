@@ -1,0 +1,8 @@
+#BC file... comments start with a # symbol
+#
+surface #1 = symmetry "far_plane"
+surface #2 = symmetry "near_plane"
+surface #3 = farField "ring"
+surface #4 = impermeableWall "airfoil" isMoving = [1]
+
+body #1 = [4]

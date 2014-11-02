@@ -1,0 +1,7 @@
+<test>
+  <decomp>udecomp flatplate 4</decomp>
+  <recomp>urecomp flatplate</recomp>
+  <np>4</np>
+  <exe>ucs</exe>
+  <diff>ucsdiff flatplate flatplate.gold</diff>
+</test>

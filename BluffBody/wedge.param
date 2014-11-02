@@ -1,0 +1,57 @@
+
+<<<BEGIN TEMPORAL CONTROL>>>
+numTimeSteps = 500
+newtonIterations = 1
+<<<END TEMPORAL CONTROL>>>
+
+<<<BEGIN SOLUTION ORDERING>>>
+Iterate wedge
+<<<END SOLUTION ORDERING>>>
+
+<<<BEGIN SPACE wedge>>>
+equationSet = compressibleNSFR
+#equationSet = compressibleEulerFR
+fluxType = roeFlux
+reorderMesh = 1
+localTimeStepping = 1
+pseudoTimeStepping = 0
+CFL = 3.0
+timeOrder = 0
+spatialOrder = 2
+firstOrderSteps = 100
+limiter = 3  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
+limiterRefresh = 1 #how many timesteps to wait before recalculating limiter, 1 - every step
+limiterFreeze = 999
+jacobianUpdateFrequency = 1
+jacobianFieldType = 0     #0 - upwind, 1 - central, 2 - complex		  
+jacobianBoundaryType = 0  #0 - upwind, 1 - central, 2 - complex		  
+jacobianBoundaryEval = 1
+numberSGS = 5
+gamma = 1.4
+#machStart = 0.7
+#machRamp = 500
+mach = 2.0
+flowDirection = [1.0, 0.0, 0.0]
+liftDirection = [0.0, 1.0, 0.0]
+solutionWrite = 10
+solutionTagStep = 0
+useRestart = 0
+restartWrite = 10
+#fieldsRequested = []
+turbulenceModel = 0
+massFractions = [0.21, 0.0, 0.79, 0.0, 0.0]
+reactionsOn = 1
+symmetry2D = 2
+
+noCVBC = 0
+
+#these numbers are for air at 20C
+refDensity = 1.153
+refVelocity = 382.2
+refLength = 1.0
+refViscosity = 1.98E-5
+refTemperature = 300
+
+scaleMesh = 0
+
+<<<END SPACE>>>

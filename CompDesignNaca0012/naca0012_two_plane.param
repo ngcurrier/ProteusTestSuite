@@ -1,0 +1,46 @@
+<<<BEGIN TEMPORAL CONTROL>>>
+numTimeSteps = 1000
+newtonIterations = 1
+<<<END TEMPORAL CONTROL>>>
+
+<<<BEGIN SOLUTION ORDERING>>>
+Iterate naca0012_two_plane
+<<<END SOLUTION ORDERING>>>
+
+<<<BEGIN SPACE naca0012_two_plane>>>
+equationSet = compressibleEuler
+fluxType = roeFlux
+reorderMesh = 1
+
+localTimeStepping = 1
+startingCFL = 3.0
+rampCFL = 60	    
+CFL = 25.0
+
+timeOrder = 0
+spatialOrder = 1
+
+jacobianUpdateFrequency = 2
+jacobianBoundaryEval = 1
+numberSGS = 6
+
+mach = 0.8
+gamma = 1.4
+
+#1.25 degrees AOA
+flowDirection = [0.999762027079909132, 0.0218148850345611205, 0.0]
+liftDirection = [0.0218148850345611205, 0.999762027079909132, 0.0]
+
+solutionWrite = 0
+solutionTagStep = 0
+
+useRestart = 0
+restartWrite = 50
+
+#design control
+designSolver = 0
+designSGSIterations = 3000
+preconditioner = 2
+designRestarts = 1
+designSearchDirections = 1500	
+<<<END SPACE>>>

@@ -1,0 +1,112 @@
+1000 iterations
+
+-- dqdb solving linear system drdb_CTSE option 3
+dI/dBeta_direct[0]: -2.773845e+00
+dI/dBeta_direct[1]: 0.000000e+00
+dI/dBeta_direct[2]: 0.000000e+00
+
+-- dqdb solving linear system drdb_CTSE option 2
+dI/dBeta_direct[0]: -2.773845e+00
+dI/dBeta_direct[1]: 0.000000e+00
+dI/dBeta_direct[2]: 0.000000e+00
+
+-- dqdb solving linear system drdb_CTSE option 2 GMRES ILU0
+BROKEN!!
+
+-- direct dqdb CTSE
+dI/dBeta_direct[0]: -2.772990e+00
+dI/dBeta_direct[1]: 0.000000e+00
+dI/dBeta_direct[2]: 0.000000e+00
+
+dI/dBeta_FD[0]: -2.772305e+00
+dI/dBeta_FD[1]: 0.000000e+00
+dI/dBeta_FD[2]: 0.000000e+00
+
+dI/dBeta_CTSE[0]: -2.770071e+00
+dI/dBeta_CTSE[1]: 0.000000e+00
+dI/dBeta_CTSE[2]: 0.000000e+00
+
+dI/dBeta_Adjoint[0]: -2.773845e+00
+dI/dBeta_Adjoint[1]: 0.000000e+00
+dI/dBeta_Adjoint[2]: 0.000000e+00
+
+(single proc)
+dI/dBeta_direct[0]: -2.774479e+00
+dI/dBeta_direct[1]: 0.000000e+00
+dI/dBeta_direct[2]: 0.000000e+00
+
+2000 iterations
+dI/dBeta_direct[0]: -2.771183e+00
+dI/dBeta_direct[1]: 0.000000e+00
+dI/dBeta_direct[2]: 0.000000e+00
+
+dI/dBeta_Adjoint[0]: -2.771183e+00
+dI/dBeta_Adjoint[1]: 0.000000e+00
+dI/dBeta_Adjoint[2]: 0.000000e+00
+
+(single proc)
+dI/dBeta_direct[0]: -2.771817e+00
+dI/dBeta_direct[1]: 0.000000e+00
+dI/dBeta_direct[2]: 0.000000e+00
+
+6000 iterations
+
+dI/dBeta_direct[0]: -2.771211e+00
+dI/dBeta_direct[1]: 0.000000e+00
+dI/dBeta_direct[2]: 0.000000e+00
+
+dI/dBeta_CTSE[0]: -2.770200e+00
+dI/dBeta_CTSE[1]: 0.000000e+00
+dI/dBeta_CTSE[2]: 0.000000e+00
+
+(single proc)
+dI/dBeta_direct[0]: -2.771845e+00
+dI/dBeta_direct[1]: 0.000000e+00
+dI/dBeta_direct[2]: 0.000000e+00
+
+(single proc)
+dI/dBeta_Adjoint[0]: -2.771845e+00
+dI/dBeta_Adjoint[1]: 0.000000e+00
+dI/dBeta_Adjoint[2]: 0.000000e+00
+
+(single proc)
+dI/dBeta_FD[0]: -2.770831e+00
+dI/dBeta_FD[1]: 0.000000e+00
+dI/dBeta_FD[2]: 0.000000e+00
+
+(single proc)
+dI/dBeta_CTSE[0]: -2.770833e+00
+dI/dBeta_CTSE[1]: 0.000000e+00
+dI/dBeta_CTSE[2]: 0.000000e+00
+
+--------------------------------------------CL ONLY ---------------------------------
+
+6000 iterations
+
+(single proc)
+dI/dBeta_direct[0]: 8.384300e+00
+dI/dBeta_direct[1]: 0.000000e+00
+dI/dBeta_direct[2]: 0.000000e+00
+
+dI/dBeta_CTSE[0]: 8.379738977953549e+00
+dI/dBeta_CTSE[1]: 0.000000e+00
+dI/dBeta_CTSE[2]: 0.000000e+00
+
+dI/dBeta_direct[0]: 8.379738977955345e+00
+dI/dBeta_direct[1]: 0.000000e+00
+dI/dBeta_direct[2]: 0.000000e+00
+
+dI/dBeta_Adjoint[0]: 8.379738481988291e+00
+qdI/dBeta_Adjoint[1]: 0.000000e+00
+dI/dBeta_Adjoint[2]: 0.000000e+00
+
+----------------------------------------------FR CL ONLY----------------------------------
+
+
+dI/dBeta_direct[0]: 9.794243514034706e+00
+dI/dBeta_direct[1]: 0
+dI/dBeta_direct[2]: 0
+
+dI/dBeta_CTSE[0]: 9.794243514427789e+00
+dI/dBeta_CTSE[1]: 0
+dI/dBeta_CTSE[2]: 0

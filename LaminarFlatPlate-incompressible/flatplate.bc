@@ -1,0 +1,12 @@
+#BC file... comments start with a # symbol
+
+surface #1 = symmetry "wall1"
+surface #2 = symmetry "wall2"
+surface #3 = farField "inflow"
+surface #4 = symmetry "laminarFloor"
+surface #5 = farField "top"
+surface #6 = farField "outflow"
+surface #8 = noSlip "turbFloor twall = [1.3]
+surface #7 = noSlip "outFloor"
+#surface #7 = farField
+#surface #8 = farField

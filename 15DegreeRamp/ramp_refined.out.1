@@ -1,0 +1,182 @@
+PARAM: Reading parameter file --> ../../Tests/15DegreeRamp//ramp_refined.param
+PARAM: Reading solution space "ramp_refined" from parameter file
+/******************************************/
+  SOLUTION SPACE: ramp_refined
+/******************************************/
+
+PARAM: Runtime parameters from file
+===================================
+	Equation set: compressibleEuler
+	Flux type: roeFlux
+	Number of SGS sweeps: 5
+	Jacobian update frequency: 5
+	Field jacobian type: upwind
+	Boundary jacobian type: upwind
+	WARNING: Using approximate boundary jacobians!!!
+	Temporal order of accuracy: 0
+	Spatial order of accuracy: 2
+	Number of first order steps to take: 50
+	Limiter ON
+		Limter refresh rate: 3
+		Using modified Venkatakrishnan limiter
+	Using Local Timestepping!!
+	CFL: 15
+	Gamma (Cp/Cv): 1.4
+	Mach number: 2
+Chemical reactions turned ON
+Reference variables (specified)
+===============================
+	velocity : 1
+	length : 1
+	temperature : 1
+	density : 1
+	viscosity: 1
+	conductivity: 1
+Reference variables (derived)
+===============================
+	time : 1
+	enthalpy: 1
+	pressure: 1
+
+	Flow direction vector 1 0 0
+	Lift direction vector 0 1 0
+
+
+
+PARAM: Reading solution ordering --> ../../Tests/15DegreeRamp//ramp_refined.param
+SOLUTION ORDERING: Reading solution ordering from parameter file
+SOLUTION ORDERING
+===================
+	+ Iterate ramp_refined
+
+PARAM: Reading temporal control file --> ../../Tests/15DegreeRamp//ramp_refined.param
+TEMPORAL CONTROL: Reading temporal parameters
+/***************************************************/
+  TEMPORAL CONTROL: Runtime parameters from file
+/***************************************************/
+
+Number of timesteps: 200
+Number of Newton iterations: 1
+
+PARTITION HDF I/O: Reading file --> ../../Tests/15DegreeRamp/ramp_refined.1.h5
+PARTITION HDF I/O: Number of local nodes 13317
+PARTITION HDF I/O: Number of ghost nodes 360
+PARTITION HDF I/O: Number of Tris 1788
+PARTITION HDF I/O: Number of Quads 8224
+PARTITION HDF I/O: Number of Tets 0
+PARTITION HDF I/O: Number of Pyramids 0
+PARTITION HDF I/O: Number of Prisms 1788
+PARTITION HDF I/O: Number of Hexes 7982
+PARTITION HDF I/O: File read successful!!
+MESH UTILITY: Building element to surrounding point map... 
+MESH UTILITY: Building point to surrounding point map... 
+MESH UTILITY: Building volume element to surrounding element map... 
+MESH UTILITY: Rewinding 0 boundary elements
+MESH UTILITY: Building surface element to surrounding element map... 
+MESH UTILITY: Building edge map... 
+MESH UTILITY: Building point to edge map... 
+Clearing old solution data
+BC: Reading boundary conditions file --> ../../Tests/15DegreeRamp/ramp_refined.bc
+BC: Surfaces found in file: 6
+BC: Largest surface ID found in file: 6
+COMPOSITE: Composite bodies NOT found in file
+BC: Runtime boundary conditions from file
+=========================================
+	Surface 1 moved to BC #1 internally  -- symmetry dual_walls
+	Surface 2 moved to BC #2 internally  -- farField outlet
+	Surface 3 moved to BC #3 internally  -- impermeableWall ramp
+	Surface 4 moved to BC #4 internally  -- symmetry top
+	Surface 5 moved to BC #5 internally  -- farField inflow
+	Surface 6 moved to BC #6 internally  -- farField inflow
+
+MESH UTILITY: Calculating geometry metrics
+MESH UTILITY: Maximum mesh extents: 1 0.000258819 0
+MESH UTILITY: Minimum mesh extents: 0 2.07508e-322 0
+MESH UTILITY: Enclosed volume center of mass: 0.451954 0.547793 0.05
+MESH UTILITY: Total enclosed volume: 0.0874113
+MESH UTILITY: Component surface area leakage: 2.88906e-17 -1.4325e-17 -4.3434e-15
+MESH UTILITY: Total surface area leakage: 4.34352e-15
+MESH UTILITY: 0 control volumes not watertight... 
+SENSORS_IO: reading sensors file ../../Tests/15DegreeRamp/ramp_refined.sensors
+COMPOSITE: Reading boundary conditions file --> ../../Tests/15DegreeRamp/ramp_refined.bc
+Initializing flow field: 
+========================
+	Qinf[0] = 1.000000e+00	Density
+	Qinf[1] = 2.000000e+00	Momentum
+	Qinf[2] = 0.000000e+00	Momentum
+	Qinf[3] = 0.000000e+00	Momentum
+	Qinf[4] = 3.785714e+00	TotalEnergy
+	Qinf[5] = 1.000000e+00	Temperature
+	Qinf[6] = 7.142857e-01	Pressure
+
+Registered fields on solution space ramp_refined: 
+============================================================
+	+ variableQ
+	+ gradVariableQ
+	+ limiter
+	+ timestep
+	+ partition
+Surface areas for identified boundaries:
+========================================
+Area for factag[1] : 9.665064e-01
+Area for factag[2] : 8.660254e-02
+Area for factag[3] : 1.008935e-01
+Area for factag[4] : 9.665064e-01
+Area for factag[5] : 1.000000e-01
+Area for factag[6] : 1.000000e-01
+
+Surface areas for composite bodies:
+====================================
+
+Beginning core flow solver:
+===========================
+
+
+1: --------------------------------------------------------------------------
+
+ *** Applying operation: Iterate ramp_refined
+ dt_min: 1.523861e-03	||R||: 2.957443e-09	D||sgs-dq||: 1.662634e-06	||dq||: 3.339608e-05	max||R||: 2.918051e-05 @node 6884	max||dq||: 1.456542e-01 @node 6884
+
+2: --------------------------------------------------------------------------
+
+ *** Applying operation: Iterate ramp_refined
+ dt_min: 1.523863e-03	||R||: 9.029622e-10	D||sgs-dq||: 1.459216e-06	||dq||: 1.295607e-05	max||R||: 8.733832e-06 @node 6884	max||dq||: 5.015816e-02 @node 9907
+
+3: --------------------------------------------------------------------------
+
+ *** Applying operation: Iterate ramp_refined
+ dt_min: 1.523868e-03	||R||: 3.678894e-10	D||sgs-dq||: 1.278521e-06	||dq||: 6.452449e-06	max||R||: 3.114407e-06 @node 6884	max||dq||: 2.195390e-02 @node 9907
+
+4: --------------------------------------------------------------------------
+
+ *** Applying operation: Iterate ramp_refined
+ dt_min: 1.523877e-03	||R||: 1.884458e-10	D||sgs-dq||: 1.374128e-06	||dq||: 3.777143e-06	max||R||: 1.376641e-06 @node 5375	max||dq||: 1.105942e-02 @node 9907
+
+5: --------------------------------------------------------------------------
+
+ *** Applying operation: Iterate ramp_refined
+ dt_min: 1.523888e-03	||R||: 1.084622e-10	D||sgs-dq||: 1.703290e-06	||dq||: 3.001811e-06	max||R||: 8.561091e-07 @node 5375	max||dq||: 7.257203e-03 @node 9907
+
+6: --------------------------------------------------------------------------
+
+ *** Applying operation: Iterate ramp_refined
+ dt_min: 1.523901e-03	||R||: 7.051914e-11	D||sgs-dq||: 2.115940e-06	||dq||: 1.959768e-06	max||R||: 5.340754e-07 @node 5375	max||dq||: 3.913530e-03 @node 9907
+
+7: --------------------------------------------------------------------------
+
+ *** Applying operation: Iterate ramp_refined
+ dt_min: 1.523913e-03	||R||: 3.963145e-11	D||sgs-dq||: 2.276541e-06	||dq||: 1.256549e-06	max||R||: 2.871447e-07 @node 5375	max||dq||: 2.087975e-03 @node 9907
+
+8: --------------------------------------------------------------------------
+
+ *** Applying operation: Iterate ramp_refined
+ dt_min: 1.523924e-03	||R||: 2.115843e-11	D||sgs-dq||: 2.290739e-06	||dq||: 7.942120e-07	max||R||: 1.508733e-07 @node 6884	max||dq||: 1.090161e-03 @node 9907
+
+9: --------------------------------------------------------------------------
+
+ *** Applying operation: Iterate ramp_refined
+ dt_min: 1.523933e-03	||R||: 1.107272e-11	D||sgs-dq||: 2.337855e-06	||dq||: 4.975352e-07	max||R||: 7.802499e-08 @node 6884	max||dq||: 5.620026e-04 @node 9907
+
+10: --------------------------------------------------------------------------
+
+ *** Applying operation: Iterate ramp_refined

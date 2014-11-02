@@ -1,0 +1,37 @@
+<<<BEGIN TEMPORAL CONTROL>>>
+numTimeSteps = 6000
+newtonIterations = 1
+<<<END TEMPORAL CONTROL>>>
+
+<<<BEGIN SOLUTION ORDERING>>>
+Iterate nhex
+<<<END SOLUTION ORDERING>>>
+
+<<<BEGIN SPACE nhex>>>
+equationSet = heatTransfer
+fluxType = roeFlux
+reorderMesh = 1
+localTimeStepping = 0
+pseudoTimeStepping = 0
+timeStep = 0.1		   
+#CFL = 500.0
+timeOrder = 2
+spatialOrder = 2
+firstOrderSteps = 10
+limiter = 0  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
+limiterRefresh = 1 #how many timesteps to wait before recalculating limiter, 1 - every step
+limiterFreeze = 999
+jacobianUpdateFrequency = 1
+jacobianFieldType = 0     #0 - upwind, 1 - central, 2 - complex		  
+jacobianBoundaryType = 0  #0 - upwind, 1 - central, 2 - complex		  
+jacobianBoundaryEval = 1
+numberSGS = 5
+solutionWrite = 100
+solutionTagStep = 0
+useRestart = 0
+restartWrite = 0
+
+#these numbers are for air at 20C
+refTemperature = 600
+
+<<<END SPACE>>>

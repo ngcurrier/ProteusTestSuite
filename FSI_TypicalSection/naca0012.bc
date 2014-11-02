@@ -1,0 +1,12 @@
+#BC file... comments start with a # symbol
+#
+surface #1 = symmetry "dual_walls"
+surface #2 = impermeableWall "airfoil" isMoving = [1]
+surface #3 = farField "ring"
+
+#These BCs are appropriate for testing GCL
+#surface #1 = sonicInflow "dual_walls"
+#surface #2 = sonicInflow "airfoil" isMoving = [1]
+#surface #3 = sonicInflow "ring"
+
+body #1 = [2]

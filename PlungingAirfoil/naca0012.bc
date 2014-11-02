@@ -1,0 +1,7 @@
+#BC file... comments start with a # symbol
+#
+surface #1 = symmetry "dual_walls"
+surface #2 = impermeableWall "airfoil" isMoving = [1]
+surface #3 = farField "ring"
+
+body #1 = [2]

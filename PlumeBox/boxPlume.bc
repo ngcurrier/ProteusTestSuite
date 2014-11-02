@@ -1,0 +1,6 @@
+#BC file... comments start with a # symbol
+#
+surface #1 = impermeableWall "floor"
+surface #2 = farField "walls"
+#surface #3 = internalInflow "injector" velocity = [0.4] flowDirection = [0.3 1.0 0.0] density = [1.0] massFractions = [0.0, 1.0] isDesign = [1] isMoving = [1]
+surface #3 = impermeableWall "injector"

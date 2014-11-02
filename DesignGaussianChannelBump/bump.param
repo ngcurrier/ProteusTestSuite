@@ -1,0 +1,75 @@
+<<<BEGIN TEMPORAL CONTROL>>>
+numTimeSteps = 2000
+newtonIterations = 1
+<<<END TEMPORAL CONTROL>>>
+
+<<<BEGIN SOLUTION ORDERING>>>
+Iterate bump
+<<<END SOLUTION ORDERING>>>
+
+<<<BEGIN SPACE bump>>>
+#equationSet = incompressibleNS
+equationSet = compressibleNSFR
+#equationSet = compressibleEulerFR
+
+fluxType = roeFlux
+reorderMesh = 1
+localTimeStepping = 1
+pseudoTimeStepping = 0
+
+CFL = 2.0
+dynamicCFL = 0    
+enableVNN = 0
+VNN = 20.0
+betaMin = 0.01
+
+timeOrder = 0
+spatialOrder = 2
+#firstOrderSteps = 10
+firstOrderSteps = 0
+
+limiter = 0  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
+limiterRefresh = 1 #how many timesteps to wait before recalculating limiter, 1 - every step
+limiterFreeze = 9999999
+
+jacobianUpdateFrequency = 3
+jacobianFieldType = 0     #0 - upwind, 1 - central, 2 - complex		  
+jacobianBoundaryType = 0  #0 - upwind, 1 - central, 2 - complex		  
+jacobianBoundaryEval = 1
+
+numberSGS = 5
+gamma = 1.4
+mach = 0.01
+flowDirection = [0.0, 0.0, 1.0]
+liftDirection = [0.0, 1.0, 0.0]
+solutionWrite = 10
+solutionTagStep = 0
+useRestart = 1
+restartWrite = 10
+fieldsRequested = [beta, partition]
+turbulenceModel = 0
+massFractions = [1.0, 0.0]
+reactionsOn = 0
+symmetry2D = 0
+
+noCVBC = 0
+
+#these numbers are for air at 20C
+refDensity = 1.153
+refVelocity = 382.2
+refLength = 0.01
+refTemperature = 300
+refViscosity = 1.84e-5
+refThermalConductivity = 2.624490e-02
+
+gaussianSourceOn = 1
+gaussianEqn = 1
+gaussianBCid = 1
+gaussianX = -0.25
+gaussianY = 0.1
+gaussianAmplitude = 0.001
+gaussianVelocityAmplitude = 0.000
+
+scaleMesh = 0
+
+<<<END SPACE>>>

@@ -1,0 +1,7 @@
+surface #1 = farField "top"
+surface #2 = farField "inflow"
+surface #3 = farField "outflow"
+surface #4 = farField "back"
+surface #5 = farField "front"
+surface #6 = farField "quad_floor"
+surface #7 = farField "tri_floor"

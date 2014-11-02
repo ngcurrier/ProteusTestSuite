@@ -1,0 +1,15 @@
+2
+0 6 1.000000000000000e+00 -3.000000000000000e-00 3.000000000000000e-00
+1 7 1.000000000000000e+00 -3.000000000000000e+00 3.000000000000000e+00
+7.908930217620220e-01
+0 0.000000000000000e+00
+1 0.000000000000000e+00
+#Format is:
+#number of design variables
+#beta 0 <designType> <value> <lower bound> <upper bound>
+#beta 1 <designType> <value> <lower bound> <upper bound>
+#...
+#Objective function value
+#Grad beta 0
+#Grad beta 1
+#...

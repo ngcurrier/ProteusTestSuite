@@ -1,0 +1,86 @@
+<<<BEGIN TEMPORAL CONTROL>>>
+numTimeSteps = 3000
+newtonIterations = 1
+<<<END TEMPORAL CONTROL>>>
+
+<<<BEGIN SOLUTION ORDERING>>>
+Iterate building
+<<<END SOLUTION ORDERING>>>
+
+<<<BEGIN SPACE building>>>
+equationSet = compressibleNSFR
+#equationSet = compressibleEulerFR
+fluxType = roeFlux
+reorderMesh = 1
+
+localTimeStepping = 1
+#startingCFL = 0.5
+#rampCFL = 600	    
+CFL = 3.0
+dynamicCFL = 0
+
+timeOrder = 0
+spatialOrder = 2
+firstOrderSteps = 0
+limiter = 3  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
+limiterRefresh = 1 #how many timesteps to wait before recalculating limiter, 1 - every step
+limiterFreeze = 999
+
+jacobianUpdateFrequency = 1
+jacobianBoundaryEval = 1
+numberSGS = 8
+
+mach = 0.0075
+gamma = 1.4
+
+flowDirection = [1.0, 0.0, 0.0]
+liftDirection = [0.0, 0.0, 1.0]
+
+solutionWrite = 5
+solutionTagStep = 0
+
+useRestart = 0
+restartWrite = 10
+
+turbulenceModel = 1
+
+massFractions = [1.0, 0.0]
+reactionsOn = 0
+
+#design control
+designSolver = 0
+designSGSIterations = 3000
+preconditioner = 2
+designRestarts = 1
+designSearchDirections = 1500	
+
+gaussianSourceOn = 1
+gaussianEqn = 1
+gaussianBCid = 1
+#gaussianX = 3.0
+#gaussianY = -1.5
+gaussianX = 10.0
+gaussianY = -7.0	  
+gaussianAmplitude = 0.0001
+gaussianVelocityAmplitude = 0.0025
+
+#air at 20C
+refDensity = 1.153
+refVelocity = 382.2
+#refVelocity = 7.0
+#This is based on the height of the library of congress tower
+refLength = 60.0
+#refLength = 280.0
+refViscosity = 1.846905e-05
+refThermalConductivity = 2.624490e-02
+refTemperature = 310
+
+scaleMesh = 1
+
+sensorTarget = [7.5473949922725582e-03, 7.2869897007143258e-03, 2.7102250715230190e-03, 2.7818469207133989e-03]
+objectiveFunction = 3
+sensorEqn = 1
+
+fieldsRequested = [partition, wallDistance, timestep, mut]
+
+<<<END SPACE>>>

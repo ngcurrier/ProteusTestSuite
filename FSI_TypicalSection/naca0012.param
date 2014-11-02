@@ -1,0 +1,108 @@
+<<<BEGIN TEMPORAL CONTROL>>> 
+numTimeSteps = 300
+newtonIterations = 13
+<<<END TEMPORAL CONTROL>>>
+
+<<<BEGIN SOLUTION ORDERING>>>
+Transfer Pitch typicalSection To Pitch naca0012
+Transfer Plunge typicalSection To Plunge naca0012
+Iterate naca0012
+Transfer CL naca0012 To CL typicalSection
+Transfer CM naca0012 To CM typicalSection
+Iterate typicalSection
+<<<END SOLUTION ORDERING>>>
+
+<<<BEGIN SPACE naca0012>>>
+
+equationSet = compressibleEuler
+fluxType = roeFlux
+
+reorderMesh = 1
+
+localTimeStepping = 1
+CFL = 30.0
+timeStep = 5.0e-1
+pseudoTimeStepping = 1
+#pseudoTimeStep = 2.0e-3
+
+timeOrder = 2
+spatialOrder = 1
+firstOrderSteps = 30
+limiter = 0  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
+limiterRefresh = 1 # how many timesteps to wait before recalculating limiter, 1 - every step
+
+jacobianUpdateFrequency = 1
+jacobianFieldType = 0     #0 - upwind, 1 - central, 2 - complex		  
+jacobianBoundaryType = 0  #0 - upwind, 1 - central, 2 - complex		  
+jacobianBoundaryEval = 1
+numberSGS = 5
+
+beta = 15.0
+gamma = 1.4
+
+mach = 0.6
+
+flowDirection = [0.998728172, 0.050418629, 0.0]
+liftDirection = [-0.050418629, 0.998728172, 0.0]
+
+# 0 - laminar (none)
+# 1 - Spalart Allmaras
+turbulenceModel = 0
+
+#reference values must be given in K, m, s, kg (metric)
+refDensity = 0.279850697
+refVelocity = 330.4032
+refLength = 0.101599
+refTemperature = 300
+refViscosity = 1.790178E-05	       
+
+#nondimensional numbers
+prandtlNumber = 0.8
+
+# mass fraction must defined for each species in model
+massFractions = [0.0, 1.0]
+reactionsOn = 0
+noCVBC = 0
+
+# do not use custom ICs
+customIcId = 0
+
+# zeros here indicate one write after run
+solutionWrite = 20
+solutionTagStep = 1
+
+useRestart = 0
+preserveRestartCounters = 1
+restartWrite = 100
+
+fieldsRequested = [partition]
+
+#use PAPA setup (6 is Isogai but grid has to be shifted to match experiment axis)
+#use movement = 5 to test gcl (pure plunge - large displacement)
+movement = 3
+gcl = 1
+
+<<<END SPACE>>>
+
+
+<<<BEGIN SPACE typicalSection>>>
+movement = 3
+
+#reference values must be given in K, m, s, kg (metric)
+
+refDensity = 0.279850697
+refVelocity = 330.4032
+refLength = 0.101599
+refTemperature = 300
+refViscosity = 1.790178E-05	   
+
+timeStep = 5.0e-1
+
+mach = 0.6
+
+solutionWrite = 1
+solutionTagStep = 0
+restartWrite = 10
+
+<<<END SPACE>>>
+

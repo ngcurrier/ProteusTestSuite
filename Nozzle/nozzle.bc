@@ -1,0 +1,12 @@
+#BC file... comments start with a # symbol
+
+surface #1 = noSlip "Nozzle_Wall" twall = [1.0]
+#surface #2 = totalTempAndPressure "Inlet" backPressure = [1.4] twall = [1.1]
+surface #2 = farField	 
+#surface #3 = farField	 
+#surface #4 = farField	 
+surface #3 = symmetry "Z_Plane_Wall"
+surface #4 = symmetry "Y_Plane_Wall"
+#surface #5 = internalOutflow "Outlet" backPressure = [0.7]
+#surface #5 = farField	 
+surface #5 = sonicOutflow

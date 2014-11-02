@@ -1,0 +1,48 @@
+<<<BEGIN TEMPORAL CONTROL>>>
+numTimeSteps = 500
+newtonIterations = 1
+<<<END TEMPORAL CONTROL>>>
+
+<<<BEGIN SOLUTION ORDERING>>>
+Iterate flatplate
+<<<END SOLUTION ORDERING>>>
+
+<<<BEGIN SPACE flatplate>>>
+equationSet = incompressibleNS
+fluxType = roeFlux
+reorderMesh = 1
+localTimeStepping = 1
+pseudoTimeStepping = 0
+CFL = 200.0
+timeOrder = 0
+spatialOrder = 2
+firstOrderSteps = 20
+limiter = 3  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
+limiterRefresh = 1 #how many timesteps to wait before recalculating limiter, 1 - every step
+limiterFreeze = 999
+jacobianUpdateFrequency = 1
+jacobianFieldType = 0     #0 - upwind, 1 - central, 2 - complex		  
+jacobianBoundaryType = 0  #0 - upwind, 1 - central, 2 - complex		  
+jacobianBoundaryEval = 0
+numberSGS = 5
+gamma = 1.4
+mach = 0.05
+beta = 15.0
+flowDirection = [1.0, 0.0, 0.0]
+liftDirection = [0.0, 1.0, 0.0]
+solutionWrite = 0
+solutionTagStep = 0
+useRestart = 0
+restartWrite = 0
+fieldsRequested = [mut, limiter, wallDistance, partition, gradVariableQ]
+turbulenceModel = 0
+symmetry2D = 2
+
+#these numbers are for air at 20C
+refDensity = 1.153
+refVelocity = 382.2
+refLength = 0.01
+refViscosity = 1.6E-3
+refTemperature = 300
+
+<<<END SPACE>>>
