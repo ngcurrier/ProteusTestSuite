@@ -33,6 +33,8 @@ solutionWrite = 0
 solutionTagStep = 0
 useRestart = 0
 restartWrite = 0
-
-
+refDensity = 1.225
+refVelocity = 340.29
+refLength = 1.0
+refTemperature = 300
 <<<END SPACE>>>
