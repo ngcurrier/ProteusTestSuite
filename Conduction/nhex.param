@@ -27,11 +27,12 @@ jacobianBoundaryType = 0  #0 - upwind, 1 - central, 2 - complex
 jacobianBoundaryEval = 1
 numberSGS = 5
 solutionWrite = 100
-solutionTagStep = 0
+solutionTagStep = 1
 useRestart = 0
 restartWrite = 0
 
 #these numbers are for air at 20C
 refTemperature = 600
+refDensity = 1.0
 
 <<<END SPACE>>>
