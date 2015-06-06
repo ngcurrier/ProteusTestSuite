@@ -1,5 +1,5 @@
 <<<BEGIN TEMPORAL CONTROL>>>
-numTimeSteps = 200
+numTimeSteps = 150
 newtonIterations = 1
 <<<END TEMPORAL CONTROL>>>
 
@@ -13,23 +13,23 @@ fluxType = roeFlux
 reorderMesh = 1
 localTimeStepping = 1
 pseudoTimeStepping = 0
-CFL = 15.0
+CFL = 20.0
 timeOrder = 0
-spatialOrder = 2
+spatialOrder = 1
 firstOrderSteps = 50
 limiter = 3  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
-limiterRefresh = 3 #how many timesteps to wait before recalculating limiter, 1 - every step
-limiterFreeze = 100
+limiterRefresh = 1 #how many timesteps to wait before recalculating limiter, 1 - every step
+limiterFreeze = 9999
 jacobianUpdateFrequency = 5
 jacobianFieldType = 0     #0 - upwind, 1 - central, 2 - complex		  
 jacobianBoundaryType = 0  #0 - upwind, 1 - central, 2 - complex		  
-jacobianBoundaryEval = 1
+jacobianBoundaryEval = 1  #1 - approximate, 0 - exact (very expensive)
 numberSGS = 5
 gamma = 1.4
 mach = 2.0
 flowDirection = [1.0, 0.0, 0.0]
 liftDirection = [0.0, 1.0, 0.0]
-solutionWrite = 0
+solutionWrite = 10
 solutionTagStep = 0
 useRestart = 0
 restartWrite = 0
@@ -37,4 +37,5 @@ refDensity = 1.225
 refVelocity = 340.29
 refLength = 1.0
 refTemperature = 300
+fieldsRequested=[partition]
 <<<END SPACE>>>

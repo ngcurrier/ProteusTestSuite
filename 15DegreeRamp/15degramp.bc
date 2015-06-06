@@ -5,4 +5,5 @@ surface #2 = farField "outlet"
 surface #3 = impermeableWall "ramp"
 surface #4 = farField "top" 
 surface #5 = farField "inflow" 
-surface #6 = farField "inflow" 
+
+
