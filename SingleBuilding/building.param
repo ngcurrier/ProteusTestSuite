@@ -56,7 +56,7 @@ designSearchDirections = 1500
 
 gaussianSourceOn = 1
 gaussianEqn = 1
-gaussianBCid = 1
+gaussianBCid = 4
 #gaussianX = 3.0
 #gaussianY = -1.5
 gaussianX = 10.0

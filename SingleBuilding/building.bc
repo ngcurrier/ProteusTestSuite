@@ -1,22 +1,8 @@
 #BC file... comments start with a # symbol
 #
-#These are the surface definitions for the original grid Bruce made
-surface #1 = noSlip "Ground_Buildings" twall = [1.0] bleedSteps = [0] isDesign = [1]
-#surface #1 = impermeableWall "Ground_Buildings"
-surface #2 = farField "Top"
-surface #3 = farFieldViscous "North"
-surface #4 = farFieldViscous "East"
-surface #5 = farFieldViscous "South"
-surface #6 = farFieldViscous "West"
+surface #1 = farField "Top"
+surface #2 = noSlip "Ground_Buildings" twall = [1.0] bleedSteps = [0] isDesign = [1]
+surface #3 = farFieldViscous "Walls"
+surface #4 = noSlip "Floor" twall = [1.0] bleedSteps = [0] isDesign = [0]
 
-body #1 = [1]
-
-#These are for the flattened bcs
-#surface #1 = farFieldViscous "posX"
-#surface #2 = noSlip "Ground_Buildings" twall = [1.0] bleedSteps = [100] isDesign = [1]
-#surface #3 = farFieldViscous "posY"
-#surface #4 = farFieldViscous "negY"
-#surface #5 = farField "Top-PosZ"
-#surface #6 = farFieldViscous "negX"
-
-#body #1 = [2]
+body #1 = [2]
