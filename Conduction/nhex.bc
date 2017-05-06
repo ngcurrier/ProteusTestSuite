@@ -2,5 +2,5 @@
 #
 surface #1 = symmetry "walls"
 surface #2 = symmetry "walls"
-surface #3 = dirichlet "in" Qref = [1.5]
-surface #4 = dirichlet "out" Qref = [1.0]
+surface #3 = isothermal "in" twall = [5.5]
+surface #4 = heatFlux "out" flux = [-4.0]
