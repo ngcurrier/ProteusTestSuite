@@ -46,9 +46,14 @@ def main():
         p = subprocess.Popen(decomp, stdout=subprocess.PIPE, shell=True)
         print str(p.communicate()[0])
 
+        # strip off the casename from recomp
+        case = recomp.split()[-1]
+        
         # do the solution
-        p = subprocess.Popen('mpirun -np ' + np + ' ' + exe, stdout=subprocess.PIPE, shell=True)
+        print '----- RUNNING PROTEUS CFD ----- '
+        p = subprocess.Popen('mpiexec -np ' + np + ' ' + exe + ' ' + case, stdout=subprocess.PIPE, shell=True)
         print str(p.communicate()[0])
+        print '----- FINISHED RUNNING PROTEUS CFD ----- '
 
         
         # do the recomp
