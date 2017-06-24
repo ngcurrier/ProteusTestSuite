@@ -1,7 +1,7 @@
 <test>
-  <decomp>udecomp.x ramp_refined.ugrid 4</decomp>
-  <recomp>urecomp.x ramp_refined</recomp>
+  <decomp>udecomp.x 15degramp.ugrid 4</decomp>
+  <recomp>urecomp.x 15degramp</recomp>
   <np>4</np>
   <exe>ucs.x</exe>
-  <diff>ucsdiff ramp_refined ramp_refined.gold</diff>
+  <diff>ucsdiff 15degramp 15degramp.gold</diff>
 </test>
