@@ -25,27 +25,27 @@ localTimeStepping = 1
 
 #startingCFL = 3.0
 #rampCFL = 500
-CFL = 50.0
+CFL = 5.0
 
 timeOrder = 0
 spatialOrder = 1
-firstOrderSteps = 50
+firstOrderSteps = 0
 limiter = 3  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
 limiterRefresh = 1 #how many timesteps to wait before recalculating limiter, 1 - every step
 
 jacobianUpdateFrequency = 1
 jacobianFieldType = 0     #0 - upwind, 1 - central, 2 - complex		  
-jacobianBoundaryType = 0  #0 - upwind, 1 - central, 2 - complex		  
+jacobianBoundaryType = 2  #0 - upwind, 1 - central, 2 - complex		  
 # setting this line to 1 will evaluate boundary jacobians
 # in an approximate way, sometimes helps with stability
 jacobianBoundaryEval = 1
 #note: negative number of sgs cycles engages explicit solve
-numberSGS = 6
+numberSGS = 5
 
 beta = 15.0
 gamma = 1.4
 
-mach = 2.0
+velocity = 2.0
 #startingMach = 0.15
 #rampMach = 100
 
@@ -73,6 +73,8 @@ solutionTagStep = 0
 useRestart = 0
 restartWrite = 100
 
-fieldsRequested=[partition, limiter_variableQ]
+fieldsRequested=[partition]
+
+symmetry2D = 2
 
 <<<END SPACE>>>
