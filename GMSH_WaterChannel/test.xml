@@ -1,0 +1,7 @@
+<test>
+  <decomp>udecomp.x channel.msh 6</decomp>
+  <recomp>urecomp.x channel</recomp>
+  <np>6</np>
+  <exe>ucs.x</exe>
+  <diff>ucsdiff channel channel.gold</diff>
+</test>

@@ -1,0 +1,11 @@
+#BC file... comments start with a # symbol
+#
+surface #32 = noSlip "top"
+surface #33 = symmetry "nearwall" 
+surface #34 = symmetry "back"
+surface #35 = noSlip "bottom" 
+surface #36 = internalOutflow "outlet" backPressure = [10.0]
+surface #37 = internalInflow "inlet" 
+
+
+
