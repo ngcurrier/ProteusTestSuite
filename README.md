@@ -5,7 +5,7 @@ This repository contains test cases for the ProteusCFD solver. While not complet
 it is hoped that these test cases will help new users become useful with the 
 software quickly.
 
-Test suit setup
+Test suite setup
 ===============
 
 A test script is prepared and can be found in ./bin.  The script requires a recent
