@@ -1,0 +1,7 @@
+<test>
+  <decomp>udecomp.x nozzle.crunch 6</decomp>
+  <recomp>urecomp.x nozzle</recomp>
+  <np>6</np>
+  <exe>ucs.x</exe>
+  <diff>ucsdiff nozzle nozzle.gold</diff>
+</test>
