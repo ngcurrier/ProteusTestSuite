@@ -1,5 +1,5 @@
 <<<BEGIN TEMPORAL CONTROL>>>
-numTimeSteps = 300
+numTimeSteps = 100
 newtonIterations = 1
 <<<END TEMPORAL CONTROL>>>
 
