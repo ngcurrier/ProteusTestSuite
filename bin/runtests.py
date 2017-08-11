@@ -6,6 +6,8 @@ import datetime
 import fnmatch
 import subprocess
 from xml.dom import minidom
+from shutil import copyfile
+import stat
 
 def main():
     run_command = 'mpirun -np '
@@ -21,6 +23,12 @@ def main():
     for file in configfiles:
         print 'TEST DEFINITION  --> ' + file
         dirt = file.rsplit('/',1)[0]
+        # copy ucsdiff.py to test directory
+        copyloc = dirt + '/ucsdiff.py'
+        copyfile('./ucsdiff.py', copyloc)
+        st = os.stat(copyloc)
+        # make file executable
+        os.chmod(copyloc, st.st_mode | stat.S_IEXEC)
         # change path to test directory
         os.chdir(dirt)
         print '** Directory: ' + os.getcwd()
@@ -60,8 +68,12 @@ def main():
         p = subprocess.Popen(recomp, stdout=subprocess.PIPE, shell=True)
         print str(p.communicate()[0])
         
-        print
 
+        # do the ucsdiff operation
+        print '----- RUNNING ERROR CHECKING -----'
+        p = subprocess.Popen(diff, stdout=subprocess.PIPE, shell=True)
+        print str(p.communicate()[0])
+        
     return
 
 if __name__ == "__main__":
