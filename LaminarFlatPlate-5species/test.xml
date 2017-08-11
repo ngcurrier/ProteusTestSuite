@@ -3,5 +3,5 @@
   <recomp>urecomp.x flatplate</recomp>
   <np>4</np>
   <exe>ucs.x</exe>
-  <diff>ucsdiff flatplate flatplate.gold</diff>
+  <diff>./ucsdiff.py flatplate.gold flatplate 0.1</diff>
 </test>

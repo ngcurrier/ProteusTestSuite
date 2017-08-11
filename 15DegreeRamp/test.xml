@@ -3,5 +3,5 @@
   <recomp>urecomp.x 15degramp</recomp>
   <np>4</np>
   <exe>ucs.x</exe>
-  <diff>ucsdiff 15degramp 15degramp.gold</diff>
+  <diff>./ucsdiff.py 15degramp.gold 15degramp 0.1</diff>
 </test>

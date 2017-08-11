@@ -3,5 +3,5 @@
   <recomp>urecomp.x nozzle</recomp>
   <np>6</np>
   <exe>ucs.x</exe>
-  <diff>ucsdiff nozzle nozzle.gold</diff>
+  <diff>./ucsdiff.py nozzle.gold nozzle 0.1</diff>
 </test>
