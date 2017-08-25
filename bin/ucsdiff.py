@@ -3,6 +3,7 @@
 import h5py as h5
 from multiprocessing import Process, Queue, Value
 from time import sleep
+import sys
 
 # Returns the number of processors given a path and a casename
 def getNumProcHDF5(path, casename):
@@ -114,7 +115,6 @@ class compareWorker(Process):
         
 if __name__ == "__main__":
     NUMBER_OF_PROCESSES = 6
-    import sys
 
     if(len(sys.argv) != 4):
         raise ValueError("USE: " + sys.argv[0] + " <goldCaseName> <diffCaseName> <relError%>")
