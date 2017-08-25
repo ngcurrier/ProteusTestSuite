@@ -50,7 +50,7 @@ class compareWorker(Process):
             gs = loadHDF5FileSolution(self.path, self.goldcase, self.iproc)
         except:
             print('UCSDIFF could not load solution gold files')
-            print('TEST FAILED'
+            print('TEST FAILED')
             sys.exit(1)
 
         try:
