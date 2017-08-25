@@ -1,0 +1,39 @@
+# Compiled Object files
+bin/*
+Make.depend
+*.slo
+*.lo
+*.o
+*.obj
+*.d
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.pyc
+
+# HDF5 results
+*.h5
+*.rs
+*.timer
+*.residual
+*.cl
+*.out.*
+*.vtk
+*.err.*
+*.Log
+
+# edited files
+*.*~
