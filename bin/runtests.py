@@ -9,6 +9,8 @@ from xml.dom import minidom
 from shutil import copyfile
 import stat
 import sys
+from timeit import default_timer as timer
+import collections
 
 def main(numProcs):
     path = '../'
@@ -17,7 +19,10 @@ def main(numProcs):
          for dirpath, dirnames, files in os.walk(path)
          for f in fnmatch.filter(files, 'test.xml')]
 
+    configfiles.sort()
     print configfiles
+
+    results = collections.OrderedDict()
     
     for file in configfiles:
         print 'TEST DEFINITION  --> ' + file
@@ -52,25 +57,36 @@ def main(numProcs):
         
         # do the solution
         print '----- RUNNING PROTEUS CFD ----- '
+        start = timer()
         p = subprocess.Popen('mpiexec -np ' + str(numProcs) + ' ucs.x ' + case, stdout=subprocess.PIPE, shell=True)
         print str(p.communicate()[0])
+        stop = timer()
         print '----- FINISHED RUNNING PROTEUS CFD ----- '
-
+        print '----- RUNTIME: ' + str(stop-start) + '-----'
         
         # do the recomp
         p = subprocess.Popen('urecomp.x ' + case, stdout=subprocess.PIPE, shell=True)
         print str(p.communicate()[0])
         
-
         # do the ucsdiff operation
         print '----- RUNNING ERROR CHECKING -----'
         p = subprocess.Popen(diff, stdout=subprocess.PIPE, shell=True)
-        print str(p.communicate()[0])
+        comms = p.communicate()[0]
+        if(comms.find('PASSED')):
+            results[file] = 'PASSED'
+        else:
+            results[file] = 'FAILED'
+        print str(comms)
         
-    return
+    return results
 
 if __name__ == "__main__":
+    results = collections.OrderedDict()
     if(len(sys.argv) ==  2):
-        main(int(sys.argv[1]))
+        results = main(int(sys.argv[1]))
     else:
         print('USAGE: ' + sys.argv[0] + ' <number of processors>')
+
+    for res in results:
+        print res + ' ' + results[res]
+        

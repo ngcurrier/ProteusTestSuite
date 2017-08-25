@@ -135,7 +135,7 @@ if __name__ == "__main__":
     npd = getNumProcHDF5(path, diffcase)
     
     if(np != npd):
-        raise ValueError("WARNING: gold case and diff'd case do not match processor count")
+        raise ValueError("WARNING: gold case and diff'd case do not match processor count, TEST FAILED!")
 
 
     # now let's diff the gold case solution to the diff'd case
