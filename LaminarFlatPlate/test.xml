@@ -1,5 +1,5 @@
 <test>
-  <decomp>udecomp.x flatplate.crunch 4</decomp>
+  <decomp>udecomp.x flatplate.crunch 8</decomp>
   <recomp>urecomp.x flatplate</recomp>
   <np>4</np>
   <exe>ucs.x</exe>

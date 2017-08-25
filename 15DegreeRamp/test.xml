@@ -1,5 +1,5 @@
 <test>
-  <decomp>udecomp.x 15degramp.ugrid 4</decomp>
+  <decomp>udecomp.x 15degramp.crunch 8</decomp>
   <recomp>urecomp.x 15degramp</recomp>
   <np>4</np>
   <exe>ucs.x</exe>
