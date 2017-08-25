@@ -7,14 +7,24 @@ from time import sleep
 # Returns the number of processors given a path and a casename
 def getNumProcHDF5(path, casename):
     filename = path + casename + '.0.h5'
-    h5f = h5.File(filename, "r")
+    try:
+        h5f = h5.File(filename, "r")
+    except:
+        print('UCSDIFF could not open file ' + filename) 
+        print('TEST FAILED')
+        sys.exit(1)
 
     return h5f['Number Of Processors'][:][0]
     
 
 def loadHDF5FileSolution(path, casename, procId):
     filename = path + casename + '.' + str(procId)  + '.h5'
-    h5f = h5.File(filename, "r")
+    try:
+        h5f = h5.File(filename, "r")
+    except:
+        print('UCSDIFF could not open file ' + filename)
+        print('TEST FAILED')
+        sys.exit(1)
 
     return h5f['Solution/variableQ']
 
@@ -35,9 +45,20 @@ class compareWorker(Process):
         
     def run(self):
         print "Evaluating process file: " + str(self.iproc)
-        gs = loadHDF5FileSolution(self.path, self.goldcase, self.iproc)
-        ds = loadHDF5FileSolution(self.path, self.diffcase, self.iproc)
-        
+        try:
+            gs = loadHDF5FileSolution(self.path, self.goldcase, self.iproc)
+        except:
+            print('UCSDIFF could not load solution gold files')
+            print('TEST FAILED'
+            sys.exit(1)
+
+        try:
+            ds = loadHDF5FileSolution(self.path, self.diffcase, self.iproc)
+        except:
+            print('UCSDIFF could not load solution testing files')
+            print('TEST FAILED')
+            sys.exit(1)
+    
         size = len(gs)
         sized = len(ds)
         varNames = gs.attrs['variable_names'].split(',')

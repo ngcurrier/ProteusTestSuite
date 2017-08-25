@@ -46,4 +46,7 @@ refLength = 0.01
 refViscosity = 1.98E-3
 refTemperature = 2800
 
+#The default chemdb location is here, change this line if installed in another location
+#chemicalDatabase = /usr/local/database/chemdb.hdf5
+
 <<<END SPACE>>>

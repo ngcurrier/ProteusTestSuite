@@ -25,6 +25,13 @@ After modifying you ~/.bashrc run:
 
 to update your environment.
 
+Also, to run all chemical tests you must build the hdf5 chemical properties database by
+checking out the ProteusCFD repository and doing the following:
+1) cd ProteusCFD/chemdata
+2) ./chemdb.py
+3) Create a symlink to the database where ProteusCFD will look.
+   * ln -s /home/<your username>/chemdata/chemdb.hdf5  /usr/local/database/chemdb.hdf5
+
 Running test script
 ==================
 
