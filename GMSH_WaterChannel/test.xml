@@ -1,7 +1,7 @@
 <test>
   <decomp>udecomp.x channel.msh 8</decomp>
   <recomp>urecomp.x channel</recomp>
-  <np>6</np>
+  <np>8</np>
   <exe>ucs.x</exe>
   <diff>./ucsdiff.py channel.gold channel 0.1</diff>
 </test>

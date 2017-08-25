@@ -1,7 +1,7 @@
 <test>
   <decomp>udecomp.x nozzle.crunch 8</decomp>
   <recomp>urecomp.x nozzle</recomp>
-  <np>6</np>
+  <np>8</np>
   <exe>ucs.x</exe>
   <diff>./ucsdiff.py nozzle.gold nozzle 0.1</diff>
 </test>

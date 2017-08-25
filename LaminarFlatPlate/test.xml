@@ -1,7 +1,7 @@
 <test>
   <decomp>udecomp.x flatplate.crunch 8</decomp>
   <recomp>urecomp.x flatplate</recomp>
-  <np>4</np>
+  <np>8</np>
   <exe>ucs.x</exe>
   <diff>./ucsdiff.py flatplate.gold flatplate 0.1</diff>
 </test>
