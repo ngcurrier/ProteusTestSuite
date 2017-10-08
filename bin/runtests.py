@@ -12,7 +12,7 @@ import sys
 from timeit import default_timer as timer
 import collections
 
-def main(numProcs):
+def main(numProcs, testID):
     path = '../'
     # find all folders with test.xml present
     configfiles = [os.path.join(dirpath, f)
@@ -20,11 +20,29 @@ def main(numProcs):
          for f in fnmatch.filter(files, 'test.xml')]
 
     configfiles.sort()
-    print configfiles
 
+    if testID == -1:
+        i = 0;
+        for file in configfiles:
+            print str(i) + ')' + ' ' + file
+            i = i + 1
+        return
+
+    tmpfiles = []
+    if(testID != 999):
+        i = 0
+        for file in configfiles:
+            if i == testID:
+                tmpfiles.append(file)
+                break
+            i = i + 1
+    else:
+        tmpfiles = configfiles
+        
     results = collections.OrderedDict()
+    print 'RUNNING TESTS: ' + str(tmpfiles)
     
-    for file in configfiles:
+    for file in tmpfiles:
         print 'TEST DEFINITION  --> ' + file
         dirt = file.rsplit('/',1)[0]
         # copy ucsdiff.py to test directory
@@ -82,11 +100,17 @@ def main(numProcs):
 
 if __name__ == "__main__":
     results = collections.OrderedDict()
-    if(len(sys.argv) ==  2):
-        results = main(int(sys.argv[1]))
-    else:
-        print('USAGE: ' + sys.argv[0] + ' <number of processors>')
+    np = 8
 
+    if(len(sys.argv) == 2):
+        if(int(sys.argv[1]) < 0):
+            main(int(np), int(-1))
+        else:
+            results = main(int(np), int(sys.argv[1]))
+    else:
+        print('USAGE: ' + sys.argv[0] + ' <test ID to run/(999) is all>')
+        main(int(np), int(-1))
+        
     for res in results:
         print res + ' ' + results[res]
         
