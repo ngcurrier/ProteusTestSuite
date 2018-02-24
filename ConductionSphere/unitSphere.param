@@ -1,19 +1,19 @@
 <<<BEGIN TEMPORAL CONTROL>>>
-numTimeSteps = 600
+numTimeSteps = 1000
 newtonIterations = 1
 <<<END TEMPORAL CONTROL>>>
 
 <<<BEGIN SOLUTION ORDERING>>>
-Iterate nhex
+Iterate unitSphere
 <<<END SOLUTION ORDERING>>>
 
-<<<BEGIN SPACE nhex>>>
+<<<BEGIN SPACE unitSphere>>>
 equationSet = heatTransfer
 fluxType = roeFlux
 reorderMesh = 1
 localTimeStepping = 0
 pseudoTimeStepping = 0
-timeStep = 0.1		   
+timeStep = 1.0		   
 #CFL = 500.0
 timeOrder = 2
 spatialOrder = 2
@@ -32,15 +32,15 @@ useRestart = 0
 restartWrite = 0
 
 #these numbers are for air at 20C
-refTemperature = 530
+refTemperature = 100
 refDensity = 1.0
 
 #these numbers are for steel
-# kg/m^3
+# Given in kg/m^3
 density = 8050
-# (J/(kg.K)
+# Given in J/(kg.K)
 specificHeat = 490
-# W/(m.K)
+# Given in W/(m.K)
 thermalConductivity = 54
 
 fieldsRequested = [gradVariableQ, variableQ, partition]

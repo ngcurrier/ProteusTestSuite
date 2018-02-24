@@ -2,5 +2,7 @@
 #
 surface #1 = symmetry "walls"
 surface #2 = symmetry "walls"
-surface #3 = isothermal "in" twall = [5.5]
-surface #4 = heatFlux "out" flux = [-4.0]
+# Temperature in Kelvin
+surface #3 = isothermal "in" twall = [500]
+# Flux in W/m^2
+surface #4 = heatFlux "out" flux = [2000.0]

@@ -1,0 +1,4 @@
+#BC file... comments start with a # symbol
+#
+surface #1 = heatFlux "in" flux = [-56000]
+#surface #1 = isothermal "in" twall = [150]
