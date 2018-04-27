@@ -44,6 +44,7 @@ refDensity = 1.4290
 refVelocity = 382.2
 refLength = 1.0
 refViscosity = 1.98E-3
-refTemperature = 600
+# autoignition temperature for H2-O2 is ~843K 
+refTemperature = 850
 
 <<<END SPACE>>>
