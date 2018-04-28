@@ -1,0 +1,4 @@
+<test>
+  <gridname> unitSphere.msh </gridname>
+  <diff>./ucsdiff.py unitSphere.gold unitSphere 0.1</diff>
+</test>
