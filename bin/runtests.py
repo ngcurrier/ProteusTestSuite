@@ -90,7 +90,7 @@ def main(numProcs, testID):
         print '----- RUNNING ERROR CHECKING -----'
         p = subprocess.Popen(diff, stdout=subprocess.PIPE, shell=True)
         comms = p.communicate()[0]
-        if(comms.find('PASSED')):
+        if(comms.find('PASSED') != -1):
             results[file] = 'PASSED'
         else:
             results[file] = 'FAILED'

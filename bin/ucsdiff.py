@@ -42,7 +42,7 @@ class compareWorker(Process):
         # NOTE: when a process is spawned all the variables are copied to the new processor
         #       we have to use value to set process variables across processes
         self.dieNow = Value('i', 0)
-        self.hasDiedTol = Value('i', 0)
+        self.hasFailed = Value('i', 0)
         
     def run(self):
         print "Evaluating process file: " + str(self.iproc)
@@ -51,13 +51,15 @@ class compareWorker(Process):
         except:
             print('UCSDIFF could not load solution gold files')
             print('TEST FAILED')
+            self.hasFailed.value = 1
             sys.exit(1)
-
+            
         try:
             ds = loadHDF5FileSolution(self.path, self.diffcase, self.iproc)
         except:
             print('UCSDIFF could not load solution testing files')
             print('TEST FAILED')
+            self.hasFailed.value = 1
             sys.exit(1)
     
         size = len(gs)
@@ -65,7 +67,10 @@ class compareWorker(Process):
         varNames = gs.attrs['variable_names'].split(',')
         
         if(size != sized):
-            raise ValueError("WARNING: gold case data size does not match diff'd case")
+            print("WARNING: gold case data size does not match diff'd case")
+            print('TEST FAILED')
+            self.hasFailed.value = 1
+            sys.exit(1)
         if self.iproc == 0:
             print "Attributes: " + str(gs.attrs.keys())
             print varNames
@@ -99,7 +104,7 @@ class compareWorker(Process):
                           + str(varNames[localid]) + ", relative error - " + str(relerror) + "%, absolute error - " \
                           + str(abserror)
                 print message
-                self.hasDiedTol.value = 1
+                self.hasFailed.value = 1
                 break
                 
     # This allows us to kill the thread from driver side
@@ -107,7 +112,7 @@ class compareWorker(Process):
         self.dieNow.value = 1
 
     def hasQuitHard(self):
-        return self.hasDiedTol.value
+        return self.hasFailed.value
 
     def getProc(self):
         return self.iproc
@@ -135,8 +140,10 @@ if __name__ == "__main__":
     npd = getNumProcHDF5(path, diffcase)
     
     if(np != npd):
-        raise ValueError("WARNING: gold case and diff'd case do not match processor count, TEST FAILED!")
-
+        print("WARNING: gold case and diff'd case do not match processor count, TEST FAILED!")
+        print('TEST FAILED')
+        sys.exit(1)
+        
 
     # now let's diff the gold case solution to the diff'd case
     # do this in a multithreaded way, it's slow
