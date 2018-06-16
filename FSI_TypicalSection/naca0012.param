@@ -40,7 +40,7 @@ numberSGS = 5
 beta = 15.0
 gamma = 1.4
 
-mach = 0.6
+velocity = 0.6
 
 flowDirection = [0.998728172, 0.050418629, 0.0]
 liftDirection = [-0.050418629, 0.998728172, 0.0]
@@ -98,7 +98,7 @@ refViscosity = 1.790178E-05
 
 timeStep = 5.0e-1
 
-mach = 0.6
+velocity = 0.6
 
 solutionWrite = 1
 solutionTagStep = 0
