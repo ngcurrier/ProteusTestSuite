@@ -1,5 +1,5 @@
 <<<BEGIN TEMPORAL CONTROL>>>
-numTimeSteps = 300
+numTimeSteps = 400
 newtonIterations = 1
 <<<END TEMPORAL CONTROL>>>
 
@@ -13,11 +13,11 @@ fluxType = roeFlux
 reorderMesh = 1
 localTimeStepping = 1
 pseudoTimeStepping = 0
-CFL = 100.0
+CFL = 30.0
 timeOrder = 0
 spatialOrder = 2
-firstOrderSteps = 20
-limiter = 3  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
+firstOrderSteps = 0
+limiter = 0  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
 limiterRefresh = 1 #how many timesteps to wait before recalculating limiter, 1 - every step
 limiterFreeze = 999
 jacobianUpdateFrequency = 1
@@ -26,7 +26,7 @@ jacobianBoundaryType = 0  #0 - upwind, 1 - central, 2 - complex
 jacobianBoundaryEval = 1
 numberSGS = 5
 gamma = 1.4
-velocity = 0.5
+velocity = 0.4
 flowDirection = [1.0, 0.0, 0.0]
 liftDirection = [0.0, 1.0, 0.0]
 solutionWrite = 10
@@ -44,7 +44,7 @@ refDensity = 1.153
 refVelocity = 382.2
 refLength = 0.01
 refViscosity = 1.98E-3
-refTemperature = 2800
+refTemperature = 1800
 
 #The default chemdb location is here, change this line if installed in another location
 #chemicalDatabase = /usr/local/database/chemdb.hdf5
