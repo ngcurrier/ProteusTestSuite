@@ -28,9 +28,9 @@ localTimeStepping = 1
 CFL = 5.0
 
 timeOrder = 0
-spatialOrder = 1
+spatialOrder = 2
 firstOrderSteps = 0
-limiter = 3  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
+limiter = 1  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
 limiterRefresh = 1 #how many timesteps to wait before recalculating limiter, 1 - every step
 
 jacobianUpdateFrequency = 1
@@ -67,14 +67,14 @@ turbulenceModel = 0
 customIcId = 0
 
 #zeros here indicate one write after run
-solutionWrite = 2
+solutionWrite = 1
 solutionTagStep = 0
 
 useRestart = 0
 restartWrite = 100
 
-fieldsRequested=[partition]
+fieldsRequested=[partition, gradVariableQ, limiter_variableQ]
 
-symmetry2D = 2
+symmetry2D = 3
 
 <<<END SPACE>>>

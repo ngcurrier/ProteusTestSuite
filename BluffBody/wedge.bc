@@ -1,6 +1,6 @@
 #BC file... comments start with a # symbol
 
-surface #1 = noSlip "wedge" twall = [1.0] bleedSteps = [0]
+surface #1 = noSlip "wedge" twall = [1.0] bleedSteps = [30]
 #surface #1 = impermeableWall "wedge"
 surface #2 = symmetry "planes" 
 surface #3 = farField "outflow" 

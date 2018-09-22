@@ -9,19 +9,19 @@ Iterate wedge
 <<<END SOLUTION ORDERING>>>
 
 <<<BEGIN SPACE wedge>>>
-equationSet = compressibleNSFR
+equationSet = compressibleNS
 #equationSet = compressibleEulerFR
 fluxType = roeFlux
 reorderMesh = 1
 localTimeStepping = 1
 pseudoTimeStepping = 0
-CFL = 3.0
+CFL = 1.5
 timeOrder = 0
 spatialOrder = 2
-firstOrderSteps = 100
-limiter = 3  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
+firstOrderSteps = 1200
+limiter = 1  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
 limiterRefresh = 1 #how many timesteps to wait before recalculating limiter, 1 - every step
-limiterFreeze = 999
+limiterFreeze = 2000
 jacobianUpdateFrequency = 1
 jacobianFieldType = 0     #0 - upwind, 1 - central, 2 - complex		  
 jacobianBoundaryType = 0  #0 - upwind, 1 - central, 2 - complex		  
@@ -30,27 +30,27 @@ numberSGS = 5
 gamma = 1.4
 #machStart = 0.7
 #machRamp = 500
-mach = 2.0
+velocity = 2.0
 flowDirection = [1.0, 0.0, 0.0]
 liftDirection = [0.0, 1.0, 0.0]
-solutionWrite = 10
+solutionWrite = 1
 solutionTagStep = 0
-useRestart = 0
-restartWrite = 10
-#fieldsRequested = []
-turbulenceModel = 0
-massFractions = [0.21, 0.0, 0.79, 0.0, 0.0]
-reactionsOn = 1
-symmetry2D = 2
+useRestart = 1
+restartWrite = 50
+fieldsRequested = [gradVariableQ, limiter_variableQ, mut]
+turbulenceModel = 1
+#massFractions = [0.21, 0.0, 0.79, 0.0, 0.0]
+reactionsOn = 0
+symmetry2D = 3
 
 noCVBC = 0
 
 #these numbers are for air at 20C
 refDensity = 1.153
 refVelocity = 382.2
-refLength = 1.0
+refLength = 0.5
 refViscosity = 1.98E-5
-refTemperature = 300
+refTemperature = 400
 
 scaleMesh = 0
 
