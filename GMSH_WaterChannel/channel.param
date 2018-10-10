@@ -43,22 +43,22 @@ jacobianBoundaryEval = 1
 numberSGS = 5
 
 beta = 15.0
-gamma = 1.4
-
-velocity = 0.5
-#startingMach = 0.15
-#rampMach = 100
 
 flowDirection = [1.0, 0.0, 0.0]
 liftDirection = [0.0, 1.0, 0.0]
 
-#these numbers are for air at 20C
+#these numbers are for water
+MW = 18.01528
+Cp = 4180.1
 refDensity = 1000.0
 # ref 10 m/s
 refVelocity = 10.0
 refLength = 1.0
 refViscosity = 8.9e-4
-refTemperature = 300
+
+velocity = 0.5
+#startingVelocity = 0.15
+#rampVelocity = 100
 
 #nondimensional numbers
 prandtlNumber = 0.8
@@ -68,7 +68,7 @@ turbulenceModel = 0
 customIcId = 0
 
 #zeros here indicate one write after run
-solutionWrite = 2
+solutionWrite = 20
 solutionTagStep = 0
 
 useRestart = 0
