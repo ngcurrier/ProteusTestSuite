@@ -1,0 +1,4 @@
+<test>
+  <gridname> tube.su2 </gridname>
+  <diff>./ucsdiff.py tube.gold tube 0.1</diff>
+</test>

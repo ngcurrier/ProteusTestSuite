@@ -1,0 +1,7 @@
+#BC file... comments start with a # symbol
+#
+surface #1 = symmetry "walls"
+surface #2 = symmetry "posZ"
+surface #3 = symmetry "negZ"
+
+
