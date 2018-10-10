@@ -1,6 +1,6 @@
 
 <<<BEGIN TEMPORAL CONTROL>>>
-numTimeSteps = 500
+numTimeSteps = 5000
 newtonIterations = 1
 <<<END TEMPORAL CONTROL>>>
 
@@ -19,9 +19,9 @@ CFL = 1.5
 timeOrder = 0
 spatialOrder = 2
 firstOrderSteps = 1200
-limiter = 1  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
+limiter = 3  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
 limiterRefresh = 1 #how many timesteps to wait before recalculating limiter, 1 - every step
-limiterFreeze = 2000
+limiterFreeze = 999999
 jacobianUpdateFrequency = 1
 jacobianFieldType = 0     #0 - upwind, 1 - central, 2 - complex		  
 jacobianBoundaryType = 0  #0 - upwind, 1 - central, 2 - complex		  

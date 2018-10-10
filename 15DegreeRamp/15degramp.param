@@ -30,7 +30,7 @@ CFL = 15.0
 timeOrder = 0
 spatialOrder = 2
 firstOrderSteps = 0
-limiter = 3  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
+limiter = 2  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
 limiterRefresh = 1 #how many timesteps to wait before recalculating limiter, 1 - every step
 
 jacobianUpdateFrequency = 1
@@ -44,7 +44,6 @@ numberSGS = 5
 
 MW = 28.966
 Cp = 1006.43
-beta = 15.0
 
 velocity = 2.0
 #startingMach = 0.15
@@ -68,7 +67,7 @@ turbulenceModel = 0
 customIcId = 0
 
 #zeros here indicate one write after run
-solutionWrite = 10
+solutionWrite = 50
 solutionTagStep = 0
 
 useRestart = 0

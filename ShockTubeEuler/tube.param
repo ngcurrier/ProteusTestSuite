@@ -30,7 +30,7 @@ CFL = 15.0
 timeOrder  = 2
 spatialOrder = 2
 firstOrderSteps = 3
-limiter = 3  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
+limiter = 0  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
 limiterRefresh = 1 #how many timesteps to wait before recalculating limiter, 1 - every step
 
 jacobianUpdateFrequency = 1
