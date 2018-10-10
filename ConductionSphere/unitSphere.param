@@ -12,9 +12,10 @@ equationSet = heatTransfer
 fluxType = roeFlux
 reorderMesh = 1
 localTimeStepping = 0
-pseudoTimeStepping = 0
 timeStep = 1.0		   
+
 #CFL = 500.0
+
 timeOrder = 2
 spatialOrder = 2
 firstOrderSteps = 3
@@ -32,7 +33,6 @@ useRestart = 0
 restartWrite = 0
 
 #these numbers are for air at 20C
-refTemperature = 100
 refDensity = 1.0
 
 #these numbers are for steel
