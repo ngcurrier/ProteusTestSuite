@@ -1,5 +1,5 @@
 <<<BEGIN TEMPORAL CONTROL>>>
-numTimeSteps = 150
+numTimeSteps = 300
 newtonIterations = 1
 <<<END TEMPORAL CONTROL>>>
 
@@ -25,12 +25,12 @@ localTimeStepping = 1
 
 #startingCFL = 3.0
 #rampCFL = 500
-CFL = 5.0
+CFL = 15.0
 
 timeOrder = 0
 spatialOrder = 2
 firstOrderSteps = 0
-limiter = 1  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
+limiter = 3  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
 limiterRefresh = 1 #how many timesteps to wait before recalculating limiter, 1 - every step
 
 jacobianUpdateFrequency = 1
@@ -42,8 +42,9 @@ jacobianBoundaryEval = 1
 #note: negative number of sgs cycles engages explicit solve
 numberSGS = 5
 
+MW = 28.966
+Cp = 1006.43
 beta = 15.0
-gamma = 1.4
 
 velocity = 2.0
 #startingMach = 0.15
@@ -57,9 +58,9 @@ refDensity = 1.153
 refVelocity = 348.2
 refLength = 1.0
 refViscosity = 1.6E-6
-refTemperature = 300
 
 #nondimensional numbers
+# prandtl = (cp.mu)/k
 prandtlNumber = 0.8
 turbulenceModel = 0
 
@@ -67,7 +68,7 @@ turbulenceModel = 0
 customIcId = 0
 
 #zeros here indicate one write after run
-solutionWrite = 1
+solutionWrite = 10
 solutionTagStep = 0
 
 useRestart = 0
