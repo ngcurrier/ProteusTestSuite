@@ -53,8 +53,8 @@ flowDirection = [1.0, 0.0, 0.0]
 liftDirection = [0.0, 1.0, 0.0]
 
 #these numbers are for air at 20C
-refDensity = 1.153
-refVelocity = 348.2
+refPressure = 101325
+refTemperature = 300
 refLength = 1.0
 refViscosity = 1.6E-6
 
