@@ -44,6 +44,8 @@ numberSGS = 5
 
 MW = 28.966
 Cp = 1006.43
+initialPressure = 101325
+initialTemperature = 300
 
 velocity = 2.0
 #startingMach = 0.15
