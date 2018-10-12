@@ -44,6 +44,9 @@ numberSGS = 5
 
 MW = 28.966
 Cp = 1006.43
+initialPressure = 101325
+initialTemperature = 300
+
 
 velocity = 0.0
 #startingMach = 0.15
@@ -53,8 +56,6 @@ flowDirection = [1.0, 0.0, 0.0]
 liftDirection = [0.0, 1.0, 0.0]
 
 #these numbers are for air at 20C
-refDensity = 1.225
-refVelocity = 343.0
 refLength = 1
 refViscosity = 1.6E-6
 
