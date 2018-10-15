@@ -35,6 +35,9 @@ restartWrite = 0
 #these numbers are for air at 20C
 refDensity = 1.0
 
+#given in Kelvin
+initialTemperature = 600
+
 #these numbers are for steel
 # Given in kg/m^3
 density = 8050
