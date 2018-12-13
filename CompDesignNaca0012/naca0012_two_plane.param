@@ -13,25 +13,31 @@ fluxType = roeFlux
 reorderMesh = 1
 
 localTimeStepping = 1
-startingCFL = 3.0
+startingCFL = 1.0
 rampCFL = 60	    
 CFL = 25.0
 
 timeOrder = 0
-spatialOrder = 1
+spatialOrder = 2
 
 jacobianUpdateFrequency = 2
 jacobianBoundaryEval = 1
 numberSGS = 6
 
-mach = 0.8
-gamma = 1.4
+velocity = 0.8
+
+MW = 28.966
+Cp = 1006.43
+initialPressure = 101325
+initialTemperature = 300
+
+refPressure = 101325
 
 #1.25 degrees AOA
 flowDirection = [0.999762027079909132, 0.0218148850345611205, 0.0]
 liftDirection = [0.0218148850345611205, 0.999762027079909132, 0.0]
 
-solutionWrite = 0
+solutionWrite = 100
 solutionTagStep = 0
 
 useRestart = 0

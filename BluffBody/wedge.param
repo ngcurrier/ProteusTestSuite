@@ -14,7 +14,7 @@ equationSet = compressibleNS
 fluxType = roeFlux
 reorderMesh = 1
 localTimeStepping = 1
-CFL = 0.35
+CFL = 5.0
 timeOrder = 0
 spatialOrder = 2
 firstOrderSteps = 100
@@ -50,6 +50,7 @@ initialPressure = 101325
 initialTemperature = 300
 refLength = 0.5
 refViscosity = 1.98E-5
+refPressure = 101325
 
 
 scaleMesh = 0
