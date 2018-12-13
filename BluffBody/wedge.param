@@ -14,28 +14,26 @@ equationSet = compressibleNS
 fluxType = roeFlux
 reorderMesh = 1
 localTimeStepping = 1
-pseudoTimeStepping = 0
-CFL = 1.5
+CFL = 0.35
 timeOrder = 0
 spatialOrder = 2
-firstOrderSteps = 1200
-limiter = 3  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
+firstOrderSteps = 100
+limiter = 1  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
 limiterRefresh = 1 #how many timesteps to wait before recalculating limiter, 1 - every step
 limiterFreeze = 999999
 jacobianUpdateFrequency = 1
 jacobianFieldType = 0     #0 - upwind, 1 - central, 2 - complex		  
 jacobianBoundaryType = 0  #0 - upwind, 1 - central, 2 - complex		  
-jacobianBoundaryEval = 1
+jacobianBoundaryEval = 0
 numberSGS = 5
-gamma = 1.4
-#machStart = 0.7
-#machRamp = 500
+velocityStart = 0.2
+velocityRamp = 500
 velocity = 2.0
 flowDirection = [1.0, 0.0, 0.0]
 liftDirection = [0.0, 1.0, 0.0]
 solutionWrite = 1
 solutionTagStep = 0
-useRestart = 1
+useRestart = 0
 restartWrite = 50
 fieldsRequested = [gradVariableQ, limiter_variableQ, mut]
 turbulenceModel = 1
@@ -46,11 +44,13 @@ symmetry2D = 3
 noCVBC = 0
 
 #these numbers are for air at 20C
-refDensity = 1.153
-refVelocity = 382.2
+MW = 28.966
+Cp = 1006.43
+initialPressure = 101325
+initialTemperature = 300
 refLength = 0.5
 refViscosity = 1.98E-5
-refTemperature = 400
+
 
 scaleMesh = 0
 
