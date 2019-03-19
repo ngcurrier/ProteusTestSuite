@@ -1,8 +1,8 @@
 #BC file... comments start with a # symbol
 
 surface #1 = noSlip "wedge" twall = [1.0] bleedSteps = [30]
-surface #2 = farField "inflow" 
-surface #3 = farField "outflow" 
-surface #4 = farField "walls" 
+surface #2 = farField "walls" 
+surface #3 = farField "inflow" 
+surface #4 = farField "outflow" 
 
-#body #1 = [5]
+body #1 = [1]
