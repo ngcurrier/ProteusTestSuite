@@ -1,5 +1,5 @@
 <<<BEGIN TEMPORAL CONTROL>>>
-numTimeSteps = 100
+numTimeSteps = 1000
 newtonIterations = 1
 <<<END TEMPORAL CONTROL>>>
 
@@ -12,11 +12,11 @@ equationSet = compressibleNS
 fluxType = roeFlux
 reorderMesh = 1
 localTimeStepping = 1
-CFL = 100.0
+CFL = 10.0
 timeOrder = 0
 spatialOrder = 2
-firstOrderSteps = 20
-limiter = 3  #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
+firstOrderSteps = 0
+limiter = 1 #0 - OFF, 1 - Barth, 2 - Venkat, 3 - mod Venkat
 limiterRefresh = 1 #how many timesteps to wait before recalculating limiter, 1 - every step
 limiterFreeze = 999
 jacobianUpdateFrequency = 1
@@ -33,7 +33,7 @@ useRestart = 0
 restartWrite = 0
 fieldsRequested = [mut, wallDistance, partition, gradVariableQ]
 turbulenceModel = 0
-symmetry2D = 2
+symmetry2D = 3
 
 #these numbers are for air at 20C
 MW = 28.966
