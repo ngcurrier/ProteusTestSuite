@@ -1,6 +1,6 @@
 NoseRadius = 0.579;
-h = 0.3;
-hfar = 5.0;
+h = 0.1;
+hfar = 1.8;
 
 
 NoseInflowStandoff = NoseRadius*20.0;
