@@ -27,12 +27,13 @@ numberSGS = 5
 velocity = 0.5
 flowDirection = [1.0, 0.0, 0.0]
 liftDirection = [0.0, 1.0, 0.0]
-solutionWrite = 0
+solutionWrite = 100
 solutionTagStep = 0
 useRestart = 0
 restartWrite = 0
 fieldsRequested = [mut, wallDistance, partition, gradVariableQ]
-turbulenceModel = 0
+turbulenceModel = 0      #0 - laminar, 1 - spalart
+turbulenceSpatialOrder = 2
 symmetry2D = 3
 
 #these numbers are for air at 20C
