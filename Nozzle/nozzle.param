@@ -12,7 +12,6 @@ equationSet = compressibleNSFR
 fluxType = roeFlux
 reorderMesh = 1
 localTimeStepping = 1
-pseudoTimeStepping = 0
 CFL = 10.0
 timeOrder = 0
 spatialOrder = 2
@@ -25,8 +24,9 @@ jacobianFieldType = 0     #0 - upwind, 1 - central, 2 - complex
 jacobianBoundaryType = 0  #0 - upwind, 1 - central, 2 - complex		  
 jacobianBoundaryEval = 1
 numberSGS = 5
-gamma = 1.4
+
 velocity = 0.5
+
 flowDirection = [1.0, 0.0, 0.0]
 liftDirection = [0.0, 1.0, 0.0]
 solutionWrite = 10
@@ -39,12 +39,15 @@ massFractions = [0.9409, 0.0, 0.0591, 0.0, 0.0, 0.0]
 reactionsOn = 1
 symmetry2D = 0
 
+MW = 28.966
+Cp = 1006.43
+initialPressure = 101325
+initialTemperature = 300
+
 #these numbers are for air at 20C
-refDensity = 1.4290
-refVelocity = 382.2
+refPressure = 101325
 refLength = 1.0
 refViscosity = 1.98E-3
 # autoignition temperature for H2-O2 is ~843K 
-refTemperature = 850
 
 <<<END SPACE>>>

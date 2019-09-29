@@ -1,8 +1,8 @@
 #BC file... comments start with a # symbol
 
 surface #1 = noSlip "Nozzle_Wall" twall = [1.0]
-#surface #2 = totalTempAndPressure "Inlet" backPressure = [1.4] twall = [1.1]
-surface #2 = farField	 
+surface #2 = totalTempAndPressure "Inlet" backPressure = [1.4] twall = [1.1]
+#surface #2 = farField	 
 #surface #3 = farField	 
 #surface #4 = farField	 
 surface #3 = symmetry "Z_Plane_Wall"
