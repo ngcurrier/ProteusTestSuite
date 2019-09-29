@@ -5,10 +5,10 @@ newtonIterations = 1
 <<<END TEMPORAL CONTROL>>>
 
 <<<BEGIN SOLUTION ORDERING>>>
-Iterate wedge
+Iterate GnoffoBiconic
 <<<END SOLUTION ORDERING>>>
 
-<<<BEGIN SPACE wedge>>>
+<<<BEGIN SPACE GnoffoBiconic>>>
 equationSet = compressibleNS
 #equationSet = compressibleEulerFR
 fluxType = roeFlux
@@ -31,7 +31,7 @@ velocityRamp = 1000
 velocity = 2.0
 flowDirection = [1.0, 0.0, 0.0]
 liftDirection = [0.0, 1.0, 0.0]
-solutionWrite = 5
+solutionWrite = 1
 solutionTagStep = 0
 useRestart = 0
 restartWrite = 50
@@ -39,7 +39,7 @@ fieldsRequested = [gradVariableQ, limiter_variableQ, mut]
 turbulenceModel = 1
 #massFractions = [0.21, 0.0, 0.79, 0.0, 0.0]
 reactionsOn = 0
-symmetry2D = 3
+#symmetry2D = 3
 
 noCVBC = 0
 
