@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import h5py as h5
 from multiprocessing import Process, Queue, Value
