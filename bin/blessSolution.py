@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # This script runs over the h5 files in the folder and converts them to gold files for test scripts
 
 import glob
