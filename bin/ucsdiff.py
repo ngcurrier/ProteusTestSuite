@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-
+#!/usr/bin/env python3
 import h5py as h5
 from multiprocessing import Process, Queue, Value
 from time import sleep
@@ -45,7 +44,7 @@ class compareWorker(Process):
         self.hasFailed = Value('i', 0)
         
     def run(self):
-        print "Evaluating process file: " + str(self.iproc)
+        print("Evaluating process file: " + str(self.iproc))
         try:
             gs = loadHDF5FileSolution(self.path, self.goldcase, self.iproc)
         except:
@@ -72,8 +71,8 @@ class compareWorker(Process):
             self.hasFailed.value = 1
             sys.exit(1)
         if self.iproc == 0:
-            print "Attributes: " + str(gs.attrs.keys())
-            print varNames
+            print("Attributes: " + str(gs.attrs.keys()))
+            print(varNames)
         # scalars and vector are numbered in sequence separately
         # a negative zero indicates that the value is NOT a scalar or vector represented
         # by that numbering list
@@ -103,7 +102,7 @@ class compareWorker(Process):
                           + str(localid) + ", local mesh node id - " + str(nodeid) + ", variable Name - " \
                           + str(varNames[localid]) + ", relative error - " + str(relerror) + "%, absolute error - " \
                           + str(abserror)
-                print message
+                print(message)
                 self.hasFailed.value = 1
                 break
                 
@@ -129,11 +128,11 @@ if __name__ == "__main__":
     reltol = float(sys.argv[3])
     path = './'
 
-    print "--------------------------------------------------------"
-    print "Examining Case: " + diffcase
-    print "Gold Case: " + goldcase
-    print "Relative Tolerance: " + str(reltol) + "%"
-    print "--------------------------------------------------------"
+    print("--------------------------------------------------------")
+    print("Examining Case: " + diffcase)
+    print("Gold Case: " + goldcase)
+    print("Relative Tolerance: " + str(reltol) + "%")
+    print("--------------------------------------------------------")
    
     # check the number of processors are identical
     np = getNumProcHDF5(path, goldcase)
@@ -176,9 +175,9 @@ if __name__ == "__main__":
 
     for t in processes:
         if t.hasQuitHard():
-            print "TEST FAILED!"
+            print("TEST FAILED!")
             sys.exit(1)
         
-    print "TEST PASSED!"
+    print("TEST PASSED!")
     sys.exit(0)
     
