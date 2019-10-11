@@ -30,8 +30,7 @@ jacobianUpdateFrequency = 1
 jacobianBoundaryEval = 1
 numberSGS = 8
 
-mach = 0.0075
-gamma = 1.4
+velocity = 0.0075
 
 flowDirection = [1.0, 0.0, 0.0]
 liftDirection = [0.0, 0.0, 1.0]
@@ -57,23 +56,17 @@ designSearchDirections = 1500
 gaussianSourceOn = 1
 gaussianEqn = 1
 gaussianBCid = 4
-#gaussianX = 3.0
-#gaussianY = -1.5
 gaussianX = 10.0
 gaussianY = -7.0	  
 gaussianAmplitude = 0.0001
 gaussianVelocityAmplitude = 0.0025
 
 #air at 20C
-refDensity = 1.153
-refVelocity = 382.2
-#refVelocity = 7.0
 #This is based on the height of the library of congress tower
 refLength = 60.0
-#refLength = 280.0
 refViscosity = 1.846905e-05
 refThermalConductivity = 2.624490e-02
-refTemperature = 310
+refPressure = 101325
 
 scaleMesh = 1
 
